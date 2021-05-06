@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/任务8.css" /> 
+    <style>
+        /* .container {
+            display: grid;
+            grid-template-columns: repeat(12,50px);
+            grid-template-rows: repeat(3,50px);
+            border: 1px solid #999;
+            background-color: #eee;
+            column-gap: 20px;
+            row-gap: 20px;
+             */
+            /* grid-template-areas: 
+            "header header header header header2 header2 header2 header2 header3 header3 header3 header3"
+            "main1 main1 main1 main2 main2 main2 main2 main2 main2 main3 main3 main3"
+            "footer1 footer2 footer3 footer3 footer4 footer4 footer5 footer5 footer5 footer5 footer5 footer5"; */
+        /* } */
+     
+        /* .item1 {
+            col-md-4
+        .item2 {
+            grid-area: header2;
+        }
+        .item3 {
+            grid-area: header3;
+        }
+        .item4 {
+            grid-area: main1;
+        }
+        .item5 {
+            grid-area: main2;
+        }
+        .item6 {
+            grid-area: main3;
+        }
+        .item7 {
+            grid-area: footer1;
+        }
+        .item8 {
+            grid-area: footer2;
+        }
+        .item9 {
+            grid-area: footer3;
+        }
+        .item10 {
+            grid-area: footer4;
+        }
+        .item11 {
+            grid-area: footer5
+        } */
+        /* @media all and (max-width: 768px) {
+      .col-sm-1 {
+          width: 8.33%;
+      }
+
+      .col-sm-2 {
+          width: 16.66%;
+      }
+
+      .col-sm-3 {
+          width: 25%;
+      }
+
+      .col-sm-4 {
+          width: 33.33%;
+      }
+
+      .col-sm-5 {
+          width: 41.66%;
+      }
+
+      .col-sm-6 {
+          width: 50%;
+      }
+
+      .col-sm-7 {
+          width: 58.33%;
+      }
+
+      .col-sm-8 {
+          width: 66.66%;
+      }
+
+      .col-sm-9 {
+          width: 75%;
+      }
+
+      .col-sm-10 {
+          width: 83.33%;
+      }
+
+      .col-sm-11 {
+          width: 91.66%;
+      }
+
+      .col-sm-12 {
+          width: 100%;
+      }
+     }
+     @media all and (min-width: 769px) {
+      .col-md-1 {
+          width: 8.33%;
+      }
+
+      .col-md-2 {
+          width: 16.66%;
+      }
+
+      .col-md-3 {
+          width: 25%;
+      }
+
+      .col-md-4 {
+          width: 33.33%;
+      }
+
+      .col-md-4 {
+          width: 41.66%;
+      }
+
+      .col-md-6 {
+          width: 50%;
+      }
+
+      .col-md-7 {
+          width: 58.33%;
+      }
+
+      .col-md-8 {
+          width: 66.66%;
+      }
+
+      .col-md-9 {
+          width: 75%;
+      }
+
+      .col-md-10 {
+          width: 83.33%;
+      }
+
+      .col-md-11 {
+          width: 91.66%;
+      }
+
+      .col-md-12 {
+          width: 100%;
+      }
+  } */
+  .container{
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    padding: 10px;
+}
+.row:after, .row:before{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col{
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    background-color: #EEEEEE;
+    height: 50px;
+    margin: 10px;
+    float: left;
+}
+@media only screen and (min-width: 769px) {
+    .col-md-1{
+        width: calc(8.333% - 20px);      
+    }
+    .col-md-2{
+        width: calc(16.666% - 20px);
+    }
+    .col-md-3{
+        width: calc(25% - 20px);
+    }
+    .col-md-4{
+        width: calc(33.333% - 20px);
+    }
+    .col-md-6{
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .col-sm-2{
+        width: calc( 16.666% - 20px);
+    }
+    .col-sm-3{
+        width: calc( 25% - 20px);
+    }
+    .col-sm-6{
+        width: calc( 50% - 20px);
+    }
+    .col-sm-8{
+        width: calc( 66.666% - 20px);
+    }
+    .col-sm-12{
+        width: calc( 100% - 20px);
+    }
+}
+/* 包含col-的所有class*/
+[class*="col-"] {
+    float: left;
+    min-height: 1px;
+    margin: 10px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="col-md-4 col-sm-6">1</div>
+        <div class="col-md-4 col-sm-6">2</div>
+        <div class="col-md-4 col-sm-12">3</div>
+        <div class="col-md-3 col-sm-12">4</div>
+        <div class="col-md-6 col-sm-3">5</div>
+        <div class="col-md-3 col-sm-6">6</div>
+        <div class="col-md-1 col-sm-3">7</div>
+        <div class="col-md-1 col-sm-2">8</div>
+        <div class="col-md-2 col-sm-2">9</div>
+        <div class="col-md-2 col-sm-2">10</div>
+        <div class="col-md-6 col-sm-8">11</div>
+       
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col">
+            </div>
+            <div class="col-md-4 col-sm-6 col">
+            </div>
+            <div class="col-md-4 col-sm-12 col">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col">
+            </div>
+            <div class="col-md-6 col-sm-6 col">
+            </div>
+            <div class="col-md-3 col-sm-3 col">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col col-sm-2">
+            </div>
+            <div class="col-md-1 col col-sm-2">
+            </div>
+            <div class="col-md-2 col col-sm-8">
+            </div>
+            <div class="col-md-2 col col-sm-3">
+            </div>
+            <div class="col-md-6 col col-sm-3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
